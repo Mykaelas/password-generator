@@ -17,12 +17,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
-//function to generate a random number
-var randomNumber = function(min, max) {
-  // return value;
-};
-
 // function to ask user how the length of their password
 var promptLength = function() {
   //ask use the length of their password
@@ -36,48 +30,69 @@ var promptLength = function() {
     inputLength = parseInt(inputLength);  
   }
 
-  // return inputLength;
-
   passwordOptions.passwordLength = inputLength;
 
 };
 
-var characterInfo = function() {
-  var numbers
-}
+// function to ask the user if they want letters in their password
+var letterChoice = function() {
+  //ask if they want random lowercase letters
+  passwordOptions.lowerCase = confirm("Would you like lowercase letters to be included in your password?");
+  passwordOptions.upperCase = confirm("Would you like uppercase letters to be included in your password?");
+  passwordOptions.numbers =  confirm("Would you like numbers to be included in your password?");
+  passwordOptions.special = confirm ("Would you like special characters to be included in your password?");
+
+  let i = 0;
+  while (passwordStorage.length < passwordOptions.passwordLength ) {
+    i++;
+    if (passwordOptions.lowerCase) {
+      passwordStorage += passwordInfo.lowerCase[Math.floor(Math.random() * passwordInfo.lowerCase.length)]
+    }
+
+    if (passwordOptions.upperCase) { 
+      passwordStorage += passwordInfo.upperCase[Math.floor(Math.random() * passwordInfo.upperCase.length)]
+    }
+
+    if (passwordOptions.numbers) {
+      passwordStorage += passwordInfo.numbers[Math.floor(Math.random() * passwordInfo.numbers.length)]
+    }
+
+    if (passwordOptions.special) {
+      passwordStorage += passwordInfo.special[Math.floor(Math.random() * passwordInfo.special.length)]
+    }
+
+  }
+};
+
+var passwordStorage = ""
 
 // Write password to the #password input
 function writePassword() {
-  var password = promptLength();
-  // var passwordText = document.querySelector("#password");
+  promptLength();
+  letterChoice();
 
-  passwordText.value = password;
-
+  var passwordText = document.querySelector("#password");
+  passwordText.value = passwordStorage;
 };
 
-var startGenerator = function () {
-  //reset password field 
-  // promptLength.reset();
-};
 
 // Button Information / Variables 
  var passwordInfo = {
-  numbers: randomNumber(0, 9),
+  numbers: "0123456789",
   lowerCase: "abcdefghijklmnopqrstuvwxyz",
   upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  special: "!@#$%^&*()`~'"
+  special: "!@#$%^&*`~"
  };
 
  var passwordOptions = {
-    passwordLength,
-    numbers,
-    lowerCase,
-    upperCase,
-    specialCharacters
+    passwordLength: 0,
+    numbers: false,
+    lowerCase: false,
+    upperCase: false,
+    specialCharacters: false
  }
 
  // End of Button Information / Variables
 
 // Add event listener to generate button
-document.getElementById("generate").addEventListener("click", writePassword);
 generateBtn.addEventListener("click", writePassword);
