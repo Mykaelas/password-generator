@@ -32,20 +32,31 @@ var letterChoice = function() {
     i++;
     if (passwordOptions.lowerCase) {
       passwordStorage += passwordInfo.lowerCase[Math.floor(Math.random() * passwordInfo.lowerCase.length)]
+      if (passwordStorage.length >= passwordOptions.passwordLength) {
+        break;
+      }
     }
 
     if (passwordOptions.upperCase) { 
       passwordStorage += passwordInfo.upperCase[Math.floor(Math.random() * passwordInfo.upperCase.length)]
+      if (passwordStorage.length >= passwordOptions.passwordLength) {
+        break;
+      }
     }
 
     if (passwordOptions.numbers) {
       passwordStorage += passwordInfo.numbers[Math.floor(Math.random() * passwordInfo.numbers.length)]
+      if (passwordStorage.length >= passwordOptions.passwordLength) {
+        break;
+      }
     }
 
     if (passwordOptions.special) {
       passwordStorage += passwordInfo.special[Math.floor(Math.random() * passwordInfo.special.length)]
+      if (passwordStorage.length >= passwordOptions.passwordLength) {
+        break;
+      }
     }
-
   }
 };
 
