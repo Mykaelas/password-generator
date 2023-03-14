@@ -1,7 +1,52 @@
-# password-generator
+# Password Generator
 
-For this project we were given some base HTML, CSS, and a little bit of JavaScript to go off of. The client wanted for the application to be a password generator and for it to assign the user with a random password once they have filled out the prompts. 
+## License:
 
-https://mykaelas.github.io/password-generator/
+No License as of this point in time.
 
-I used the while loop along with if statements in order to create the random loop function for the different questions asked. The most important one was coding the desired length that the user wanted. I had to make sure that I coded it so that it was more than 8 but less than 128 characters. I also added in a variable information bottom area that lists the different string types and variables. ![password generator](https://user-images.githubusercontent.com/101831653/173721248-15a8d2f0-3d69-48c5-a51c-865814e0e41a.png)
+## Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Languages](#langugaes)
+- [Usage](#usage)
+- [License](#license)
+- [Contributions](#contributions)
+- [Questions](#questions)
+- [Links](#links)
+
+## Description:
+![password generator](https://user-images.githubusercontent.com/101831653/173721248-15a8d2f0-3d69-48c5-a51c-865814e0e41a.png)
+
+This project was created in order to help clients get randomized passwords to protect their accounts. The user is prompted to put in a number between 8-128, and asked if they would like a mixture of upper case, lower case, and speical characters included. 
+
+## Installation:
+
+To view this application simply click on the link https://mykaelas.github.io/password-generator/ .
+
+## Languages: 
+The languages used to create this app are: 
+- JavaScript
+- HTML
+- CSS
+
+## Usage:
+This makes it easier for clients to protect their privacy and have a completely random password that will be difficult to guess. 
+
+## License:
+
+None
+
+## Contributions:
+
+None
+
+## Questions:
+
+Want to see more of my work? Reach out to me here at https://github.com/Mykaelas to see what I am working on next.
+
+You can reach out to me on LinkedIn: https://www.linkedin.com/in/mykaela-saenz-526211141/
+
+## Links:
+Need help understanding what to do? No problem, follow this link https://www.youtube.com/watch?v=DmkZWTKX-9I to help. 
+
